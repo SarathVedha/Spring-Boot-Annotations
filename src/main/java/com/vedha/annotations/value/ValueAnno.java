@@ -7,16 +7,16 @@ import org.springframework.stereotype.Component;
 public class ValueAnno {
 
     @Value("Spring Boot --> Value Annotation (Default)")
-    private String defaultValue;
+    private String defaultValue; // Default value
 
     @Value("${value.anno}")
-    private String propertyValue;
+    private String propertyValue; // Property value
 
     @Value("${java.home}")
-    private String sysValue;
+    private String sysValue; // System Variable value
 
     @Value("${OS}")
-    private String envValue;
+    private String envValue; // Environment Variable value
 
     public String getDefaultValue() {
         return defaultValue;

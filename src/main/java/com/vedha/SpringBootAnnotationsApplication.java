@@ -55,31 +55,36 @@ public class SpringBootAnnotationsApplication {
 
 		LazyLoaderAnno bean9 = appContext.getBean(LazyLoaderAnno.class);
 		System.out.println(bean9.getSampleMethod());
+		System.out.println(bean9.hashCode());
 
-		System.out.println("Spring Boot --> Scope Annotation");
+		LazyLoaderAnno lazyBean = appContext.getBean(LazyLoaderAnno.class);
+		System.out.println(lazyBean.getSampleMethod());
+		System.out.println(lazyBean.hashCode());
+
+		System.out.println("---Spring Boot Scope Annotation---");
 		SpringDefaultScope bean10 = appContext.getBean(SpringDefaultScope.class);
-		System.out.println(bean10.hashCode());
+		System.out.println("Default: " + bean10.hashCode());
 
 		SpringDefaultScope bean11 = appContext.getBean(SpringDefaultScope.class);
-		System.out.println(bean11.hashCode());
+		System.out.println("Default: " + bean11.hashCode());
 
 		SingletonBeanScopeAnno bean12 = appContext.getBean(SingletonBeanScopeAnno.class);
-		System.out.println(bean12.hashCode());
+		System.out.println("Singleton: " + bean12.hashCode());
 
 		SingletonBeanScopeAnno bean13 = appContext.getBean(SingletonBeanScopeAnno.class);
-		System.out.println(bean13.hashCode());
+		System.out.println("Singleton: " + bean13.hashCode());
 
 		SingletonBeanScopeAnno bean14 = appContext.getBean(SingletonBeanScopeAnno.class);
-		System.out.println(bean14.hashCode());
+		System.out.println("Singleton: " + bean14.hashCode());
 
 		PrototypeBeanScopeAnno bean15 = appContext.getBean(PrototypeBeanScopeAnno.class);
-		System.out.println(bean15.hashCode());
+		System.out.println("prototype: " + bean15.hashCode());
 
 		PrototypeBeanScopeAnno bean16 = appContext.getBean(PrototypeBeanScopeAnno.class);
-		System.out.println(bean16.hashCode());
+		System.out.println("prototype: " + bean16.hashCode());
 
 		PrototypeBeanScopeAnno bean17 = appContext.getBean(PrototypeBeanScopeAnno.class);
-		System.out.println(bean17.hashCode());
+		System.out.println("prototype: " + bean17.hashCode());
 
 		ValueAnno bean18 = appContext.getBean(ValueAnno.class);
 		System.out.println(bean18.getDefaultValue());
