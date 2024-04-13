@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class SingletonBeanScopeAnno {
 
+    // SingletonBeanScopeAnno Constructor creates a single instance
     public SingletonBeanScopeAnno() {
 
         System.out.println("Spring Boot --> SingletonBean Scope Annotation");

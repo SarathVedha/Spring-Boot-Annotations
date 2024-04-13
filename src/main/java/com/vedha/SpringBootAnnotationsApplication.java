@@ -1,5 +1,7 @@
 package com.vedha;
 
+import com.vedha.annotations.bean.BeanLifeCycle;
+import com.vedha.annotations.bean.BeanLifeCycleAnno;
 import com.vedha.annotations.repository.RepositoryAnno;
 import com.vedha.annotations.autowired.AutowiredAnno;
 import com.vedha.annotations.bean.BeanClass;
@@ -43,6 +45,22 @@ public class SpringBootAnnotationsApplication {
 
 		BeanClass bean5 = appContext.getBean(BeanClass.class);
 		System.out.println(bean5.getSampleMethod());
+
+		BeanLifeCycle bean21 = appContext.getBean(BeanLifeCycle.class);
+		System.out.println(bean21.hashCode());
+		bean21.display();
+
+		BeanLifeCycle bean22 = appContext.getBean(BeanLifeCycle.class);
+		System.out.println(bean22.hashCode());
+		bean22.display();
+
+		BeanLifeCycleAnno bean23 = appContext.getBean(BeanLifeCycleAnno.class);
+		System.out.println(bean23.hashCode());
+		bean23.display();
+
+		BeanLifeCycleAnno bean24 = appContext.getBean(BeanLifeCycleAnno.class);
+		System.out.println(bean24.hashCode());
+		bean24.display();
 
 		ControllerAnno bean6 = appContext.getBean(ControllerAnno.class);
 		System.out.println(bean6.getSampleMethod());

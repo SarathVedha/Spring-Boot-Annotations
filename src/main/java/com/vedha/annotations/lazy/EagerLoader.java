@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class EagerLoader {
 
     // Spring default loading the beans at eager level.
-    // Constructor will be called at the time of application start up.
+    // Constructor will be called at the time of application start up and its singleton.
     public EagerLoader() {
 
         System.out.println("Eager Loader.....");

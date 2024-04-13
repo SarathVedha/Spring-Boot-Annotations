@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class LazyLoaderAnno {
 
     // Lazy loading the beans.
-    // Constructor will be called at the time of bean creation.
+    // Constructor will be called at the time of bean creation. its singleton bean.
     public LazyLoaderAnno() {
 
         System.out.println("Lazy Loader....");

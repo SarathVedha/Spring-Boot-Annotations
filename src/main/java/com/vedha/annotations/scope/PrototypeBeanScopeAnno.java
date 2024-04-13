@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class PrototypeBeanScopeAnno {
 
+    // PrototypeBeanScopeAnno Constructor creates a new instance every time it is called
     public PrototypeBeanScopeAnno() {
 
         System.out.println("Spring Boot --> PrototypeBean Scope Annotation");
