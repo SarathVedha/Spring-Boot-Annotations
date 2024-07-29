@@ -2,6 +2,8 @@ package com.vedha;
 
 import com.vedha.annotations.bean.BeanLifeCycle;
 import com.vedha.annotations.bean.BeanLifeCycleAnno;
+import com.vedha.annotations.conditional.*;
+import com.vedha.annotations.conditional.ConditionalJavaVersionAnno;
 import com.vedha.annotations.repository.RepositoryAnno;
 import com.vedha.annotations.autowired.AutowiredAnno;
 import com.vedha.annotations.bean.BeanClass;
@@ -119,6 +121,23 @@ public class SpringBootAnnotationsApplication {
 		ConfigurationPropertiesClass bean20 = appContext.getBean(ConfigurationPropertiesClass.class);
 		bean20.printProperties();
 
+		ConditionalAnno bean25 = appContext.getBean(ConditionalAnno.class);
+		bean25.print();
+
+		ConditionalPropertyAnno bean26 = appContext.getBean(ConditionalPropertyAnno.class);
+		bean26.print();
+
+		ConditionalJavaVersionAnno bean27 = appContext.getBean(ConditionalJavaVersionAnno.class);
+		bean27.print();
+
+		ConditionalBeanAnno bean28 = appContext.getBean(ConditionalBeanAnno.class);
+		bean28.print();
+
+		ConditionalClassAnno bean29 = appContext.getBean(ConditionalClassAnno.class);
+		bean29.print();
+
+		ConditionalExpAnno bean30 = appContext.getBean(ConditionalExpAnno.class);
+		bean30.print();
 	}
 
 }
